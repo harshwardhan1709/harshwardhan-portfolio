@@ -20,19 +20,19 @@ import Footer from './components/Footer';
 export default function App() {
   const [loading, setLoading] = useState(true);
 
-  // If you are using a custom GSAP cursor, it's best to apply the 'cursor-none' 
-  // class to the main wrapper below rather than directly manipulating the document body, 
-  // but keeping this fallback is completely fine.
+  // Fallback to ensure cursor is hidden when custom cursor is active
   useEffect(() => {
     if (!loading) {
       document.body.style.cursor = 'none';
     } else {
-      document.body.style.cursor = 'auto'; // Reset if loading is toggled
+      document.body.style.cursor = 'auto'; 
     }
   }, [loading]);
 
   return (
-    <Router>
+    // THE FIX: The basename tells React Router to treat /harshwardhan-portfolio/ as the root "/"
+    <Router basename="/harshwardhan-portfolio/">
+      
       {/* Global Toast Notification System */}
       <Toaster 
         position="bottom-center" 
@@ -51,7 +51,7 @@ export default function App() {
         <Preloader onComplete={() => setLoading(false)} />
       ) : (
         /* Added 'cursor-none' here as a Tailwind fallback for hiding the default cursor */
-        <div className="relative min-h-screen bg-forest text-white selection:bg-golden selection:text-forest overflow-x-hidden cursor-none">
+        <div className="relative min-h-screen bg-[#01140d] text-white selection:bg-golden selection:text-[#01140d] overflow-x-hidden cursor-none">
           
           {/* Always-on Global Tools */}
           <CustomCursor />
