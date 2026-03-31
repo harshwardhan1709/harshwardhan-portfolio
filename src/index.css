@@ -1,0 +1,23 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for a polished look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #02462E; 
+}
+::-webkit-scrollbar-thumb {
+  background: #FEC700; 
+  border-radius: 4px;
+}
+
+body, html, #root {
+  background-color: #01140d; /* Forces the browser base to match your dark theme */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
