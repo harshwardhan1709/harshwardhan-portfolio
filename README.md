@@ -64,21 +64,6 @@ Bash
 npm run deploy
 The system will automatically build the dist directory and push it to the gh-pages branch.
 
-📁 System Modules
-Plaintext
-/src
- ├── /assets           # Static files, images, and downloadable resumes
- ├── /components       # Modular UI blocks
- │    ├── About.jsx           # Bio, Auto-Typer, CI/CD visual, Live Git Feed
- │    ├── CustomCursor.jsx    # GSAP trailing cursor logic
- │    ├── Footer.jsx          # Magnetic buttons, dynamic email, live clock
- │    ├── Hero.jsx            # Entry point with masked text animations
- │    ├── Navbar.jsx          # Global routing and scroll-spy progress bar
- │    ├── Projects.jsx        # Responsive horizontal/stacking gallery
- │    ├── Sandbox.jsx         # Interactive 3-pane IDE simulation
- │    └── TerminalOverlay.jsx # Global Ctrl+K command line
- ├── App.jsx           # Master route controller and component stack
- ├── index.css         # Global Tailwind directives and custom scrollbar resets
- └── main.jsx          # React DOM mounting
+
 
 Architected and Engineered by Harsh Wardhan.
